@@ -13,11 +13,21 @@ body{
     margin: 0 auto;
 }
 .header{
-    background-image: url(../img/main.jpg);
-    min-height: 736px;
+    position:fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.header_bg{
+    background-color: #FAFAFA;
 }
 .navbar{
+    display: flex;
     padding: 36px 0;
+    max-width: 1024px;
+    margin: 0 auto;
+
 }
 .nav_list{
     display: flex;
@@ -40,6 +50,16 @@ body{
     color: #737373;
 }
 
+.intro{
+    background-image: url(../img/main.jpg);
+    min-height: 736px;
+    padding-top: 80px;
+    background-repeat: no-repeat;
+    -moz-background-size: 100%; 
+    -webkit-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%;
+}
 .intro_info{
     margin-top: 80px;
     position: relative;
@@ -584,7 +604,7 @@ body{
 }
 
 @media (max-width: 895px) {
-    .header {
+    .intro {
         background-repeat: no-repeat;
         background-size: cover;    
     }
@@ -629,9 +649,100 @@ body{
 }
 
 @media (min-width: 320px) and (max-width: 894px){
-    .nav_list li{
-        display: none;
+    body.lock {
+        overflow: hidden;
     }
+    .navbar_brand{
+        z-index: 2;
+    }
+    .navbar{
+        justify-content: space-between;
+        z-index: 2;
+        padding: 36px 36px;
+    }
+    .nav_list{
+        display: none;
+        text-align: center;
+        background-color: #F6F6F6;
+    }
+
+    .nav_list.active {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        font-size: 30px;
+        line-height: 45px;
+        padding: 164px 0 0 0 ;
+        font-weight: 500;
+
+    }
+    .nav_list.active > li {
+        margin-bottom: 30px;
+    }
+
+    .nav_list.active > li > a{
+        padding: 0;
+    }
+
+    .navbar{
+        position: relative;
+    }
+    
+    .header__burger {
+        position: relative;
+        z-index: 3;
+        display: block;
+        width: 30px;
+        height: 20px;
+    }
+    .header__burger span {
+    background-color: #252B42;
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    right: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+    content: "";
+    background-color: #252B42;
+    position: absolute;
+    height: 2px;
+    right: 0;
+    transition: all 0.3s ease 0s;
+    }
+    .header__burger::before {
+        top: 0;
+        width: 100%;
+    }
+    .header__burger::after {
+        bottom: 0;
+        width: 30%;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+        transition: 0.5s;
+    }
+    .header__burger.active:before {
+        width: 100%;
+        transform: rotate(45deg);
+        top: 9px;
+        transition: 0.4s;
+    }
+    .header__burger.active:after {
+        width: 100%;
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: 0.4s;
+    }    
+    
     .intro_info h1 {
         font-size: 40px;
         line-height: 57px;
@@ -646,7 +757,6 @@ body{
         margin-bottom: 25px;
     }
     .intro_card{
-        width: auto;   
         padding: 35px 20px 35px 40px; 
     }
     .choose_us-info{
