@@ -27,7 +27,6 @@ body{
     padding: 36px 0;
     max-width: 1024px;
     margin: 0 auto;
-
 }
 .nav_list{
     display: flex;
@@ -50,6 +49,27 @@ body{
     color: #737373;
 }
 
+section#yak2::before {
+    content: '';
+    display: block;
+    height: 45px;
+    visibility: hidden;
+}
+section#yak3::before {
+    content: '';
+    display: block;
+    height: 45px;
+    visibility: hidden;
+}
+section#yak4::before {
+    content: '';
+    display: block;
+    height: 45px;
+    visibility: hidden;
+}
+
+
+  
 .intro{
     background-image: url(../img/main.jpg);
     min-height: 736px;
