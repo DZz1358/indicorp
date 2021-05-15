@@ -153,17 +153,10 @@ section#yak4::before {
     line-height: 20px;
     color: #252B42;
 }
-
-
-
-
-
-
 .choose_us{
     margin-top: 131px;
     margin-bottom: 80px;
 }
-
 .choose_us-text{
     text-align: center;
 }
@@ -216,7 +209,6 @@ section#yak4::before {
     font-weight: 700;
     padding-bottom: 30px;
 }
-
 
 /* Practice    advice */
 .practice_advice{
@@ -498,6 +490,64 @@ section#yak4::before {
 .get_touch-card:nth-child(2) button:hover{
     background-color: #fff;
     color: #252B42;
+}
+.popup-fade {
+	display: none;
+}
+.popup-fade:before {
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+.popup {
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	padding: 20px;
+	width: 300px;
+	margin-left: -151px;	
+	background: #fff;
+	border: 1px solid orange;
+	border-radius: 4px; 
+	z-index: 99999;
+	opacity: 1;	
+}
+.popup-close {
+	position: absolute;
+	top: 10px;
+	right: 40px;
+}
+.popup_body{
+    text-align: left;
+}
+.popup_content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.popup_content input,textarea{
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    border: 1px solid #FFA62B;
+    margin-top: 5px;
+    padding: 10px;
+}
+.popup_footer button{
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #FFA62B;
+    padding: 15px 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 /* ===== FOOTER ====== */
