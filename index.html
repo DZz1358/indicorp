@@ -155,11 +155,8 @@
                                 of the behaviour </span>
                         </div>
                         <img src="img/photo4.jpg" alt="">
-
                     </div>
-
                 </div>
-
             </div>
         </section>
         <section class="label">
@@ -191,10 +188,10 @@
                         <div>
                             <span>Subscribe For Latest <br>Newsletter</span>
                         </div>
-                        <div class="label_callback-input">
-                            <input type="text" placeholder="Your Email">
-                            <button type="button">Subscribe</button>
-                        </div>
+                        <form class="label_callback-input">
+                            <input type="email" name="email" placeholder="Your Email">
+                            <button type="submit">Subscribe</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -275,24 +272,24 @@
                         <form>
                             <div class="popup_content">
                                 <label for="recipient_name">Your name:</label>
-                                <input type="text" id="recipient_name">
+                                <input type="text" id="recipient_name" placeholder="Enter your name" required>
                             </div>
                             <div class="popup_content">
                                 <label for="recipient_tel">Your number:</label>
-                                <input type="tel" id="recipient_tel">
+                                <input type="tel" id="recipient_tel" pattern="[0-9]{12}" minlength="12" maxlength="12" placeholder="380967927149" required>
                             </div>
                             <div class="popup_content">
                                 <label for="recipient_mail">Your mail:</label>
-                                <input type="email" id="recipient_mail">
+                                <input type="email" id="recipient_mail" placeholder="example@example.com" required>
                             </div>
                             <div class="popup_content">
                                 <label for="message_text">Your massage:</label>
                                 <textarea name="" id="message_text" ></textarea>
                             </div>
-                        </form>    
-                    </div>
-                    <div class="popup_footer">
-                        <button>Send</button>
+                            <div class="popup_footer">
+                                <button>Send</button>
+                            </div>        
+                        </form>
                     </div>
                 </div>
             </div>
